@@ -1,0 +1,4 @@
+D:\rummykhan\visual studio\rummykhan\rummykhan\bin\Debug\rummykhan.dll
+D:\rummykhan\visual studio\rummykhan\rummykhan\bin\Debug\rummykhan.pdb
+D:\rummykhan\visual studio\rummykhan\rummykhan\obj\Debug\rummykhan.dll
+D:\rummykhan\visual studio\rummykhan\rummykhan\obj\Debug\rummykhan.pdb

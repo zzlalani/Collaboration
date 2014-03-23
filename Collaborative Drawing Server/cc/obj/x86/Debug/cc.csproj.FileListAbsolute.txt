@@ -1,0 +1,9 @@
+D:\rummykhan\visual studio\cc\cc\bin\Debug\cc.exe
+D:\rummykhan\visual studio\cc\cc\bin\Debug\cc.pdb
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.Form1.resources
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.Properties.Resources.resources
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.csproj.GenerateResource.Cache
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.exe
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.pdb
+D:\rummykhan\visual studio\cc\cc\obj\x86\Debug\cc.csprojResolveAssemblyReference.cache
+D:\rummykhan\visual studio\cc\cc\bin\Debug\rummykhan.dll

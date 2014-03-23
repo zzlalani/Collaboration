@@ -1,0 +1,9 @@
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\bin\Debug\DrawingClient.exe
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\bin\Debug\DrawingClient.pdb
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\DrawingClient.csproj.GenerateResource.Cache
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\DrawingClient.exe
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\DrawingClient.pdb
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\DrawingClient.csprojResolveAssemblyReference.cache
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\dClient.Form1.resources
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\dClient.Properties.Resources.resources
+D:\rummykhan\visual studio\DrawingClient\DrawingClient\bin\Debug\rummykhan.dll
