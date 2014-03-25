@@ -36,8 +36,17 @@ namespace cc
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lblServerStatus.Text = "Idle";
-            lblClientStatus.Text = "Idle";
+            try
+            {
+                TcpListener listener = new TcpListener(IPAddress.Loopback, 8000);
+                listener.Start();
+                listener.BeginAcceptTcpClient(new AsyncCallback(AcceptConnection), listener);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Server Exception");
+            }
         }
 
         private void Form1_MouseDown(object sender, MouseEventArgs e)
@@ -59,41 +68,48 @@ namespace cc
             if (k==1)
             {
                 ep = e.Location;
-                g = this.CreateGraphics();
+                g = drawCanvas.CreateGraphics();
                 g.DrawLine(p, sp, ep);
-                label3.Text = sp.ToString();
-                label4.Text = ep.ToString();
                 startpoints.Add(sp.ToString());
                 endpoints.Add(ep.ToString());
             }
             sp = ep;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                TcpListener listener = new TcpListener(IPAddress.Loopback, 8000);
-                listener.Start();
-                lblServerStatus.Text = "Server Started";
-                listener.BeginAcceptTcpClient(new AsyncCallback(AcceptConnection), listener);
-            }
-            catch (Exception ex)
-            {
+        /**/
 
-                MessageBox.Show(ex.Message,"Server Exception");
+        private void drawCanvas_MouseDown(object sender, MouseEventArgs e)
+        {
+            sp = e.Location;
+            if (e.Button == MouseButtons.Left)
+            {
+                k = 1;
             }
+        }
+
+        private void drawCanvas_MouseUp(object sender, MouseEventArgs e)
+        {
+            k = 0;
+        }
+
+        private void drawCanvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (k == 1)
+            {
+                ep = e.Location;
+                g = drawCanvas.CreateGraphics();
+                g.DrawLine(p, sp, ep);
+                startpoints.Add(sp.ToString());
+                endpoints.Add(ep.ToString());
+            }
+            sp = ep;
         }
 
         void AcceptConnection(IAsyncResult ar)
         {
             TcpListener listener = (TcpListener)ar.AsyncState;
             TcpClient c = listener.EndAcceptTcpClient(ar);
-            lblClientStatus.Invoke(new MethodInvoker(delegate()
-                { 
-                    lblClientStatus.Text = "Client Connected : " + c.Client.RemoteEndPoint.ToString();
-                }
-                ));
+            
             Thread t = new Thread(new ParameterizedThreadStart(RcV));
             t.Start(c);
         }

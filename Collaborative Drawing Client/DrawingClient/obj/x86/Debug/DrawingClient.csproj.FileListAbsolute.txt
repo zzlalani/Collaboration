@@ -7,3 +7,11 @@ D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\DrawingClie
 D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\dClient.Form1.resources
 D:\rummykhan\visual studio\DrawingClient\DrawingClient\obj\x86\Debug\dClient.Properties.Resources.resources
 D:\rummykhan\visual studio\DrawingClient\DrawingClient\bin\Debug\rummykhan.dll
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.exe
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.pdb
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\bin\Debug\DrawingClient.exe
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\bin\Debug\DrawingClient.pdb
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.csprojResolveAssemblyReference.cache
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\dClient.Form1.resources
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\dClient.Properties.Resources.resources
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.csproj.GenerateResource.Cache
