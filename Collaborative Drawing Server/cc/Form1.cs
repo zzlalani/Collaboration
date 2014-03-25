@@ -49,33 +49,6 @@ namespace cc
             }
         }
 
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-            sp = e.Location;
-            if (e.Button==MouseButtons.Left)
-            {
-                k = 1;
-            }
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-            k = 0;
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (k==1)
-            {
-                ep = e.Location;
-                g = drawCanvas.CreateGraphics();
-                g.DrawLine(p, sp, ep);
-                startpoints.Add(sp.ToString());
-                endpoints.Add(ep.ToString());
-            }
-            sp = ep;
-        }
-
         /**/
 
         private void drawCanvas_MouseDown(object sender, MouseEventArgs e)
@@ -140,6 +113,11 @@ namespace cc
             catch (Exception ex)
             {
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.drawCanvas = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.drawCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,25 +45,15 @@
             this.drawCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawCanvas_MouseMove);
             this.drawCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawCanvas_MouseUp);
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 325);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 43);
-            this.panel1.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(596, 380);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(596, 408);
             this.Controls.Add(this.drawCanvas);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(612, 419);
-            this.MinimumSize = new System.Drawing.Size(612, 419);
             this.Name = "Form1";
             this.Text = "Server";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -76,7 +65,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox drawCanvas;
-        private System.Windows.Forms.Panel panel1;
+
 
 
 

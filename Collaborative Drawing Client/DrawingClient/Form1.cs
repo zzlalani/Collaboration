@@ -31,21 +31,6 @@ namespace dClient
 
         List<Point> myPoints;
         DrawingClient dc = new DrawingClient();
-        
-        private void Form1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
 
         /**/
 
