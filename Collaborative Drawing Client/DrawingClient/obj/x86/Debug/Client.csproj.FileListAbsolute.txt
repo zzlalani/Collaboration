@@ -1,0 +1,7 @@
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\bin\Debug\DrawingClient.exe
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\bin\Debug\DrawingClient.pdb
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\dClient.Form1.resources
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\dClient.Properties.Resources.resources
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\Client.csproj.GenerateResource.Cache
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.exe
+F:\Study\Spring2014\NetworkProgramming\Project\Rehan\collaboration\Collaborative Drawing Client\DrawingClient\obj\x86\Debug\DrawingClient.pdb

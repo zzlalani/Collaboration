@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.drawCanvas = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.drawCanvas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,15 +46,16 @@
             this.drawCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.drawCanvas_MouseMove);
             this.drawCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.drawCanvas_MouseUp);
             // 
-            // button1
+            // btnConnect
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(509, 325);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Connect";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConnect.Location = new System.Drawing.Point(509, 325);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 28);
+            this.btnConnect.TabIndex = 6;
+            this.btnConnect.Text = "Connect";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // Form1
             // 
@@ -62,7 +63,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(596, 408);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.drawCanvas);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MinimizeBox = false;
@@ -77,7 +78,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox drawCanvas;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 

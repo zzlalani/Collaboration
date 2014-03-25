@@ -70,15 +70,48 @@ namespace dClient
             sp = ep;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnConnect_Click(object sender, EventArgs e)
         {
             client = new TcpClient();
             client.Connect(IPAddress.Loopback, 8000);
 
+            Thread t = new Thread(new ParameterizedThreadStart(RcV));
+            t.Start(client);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
         }
+
+        void RcV(object obj)
+        {
+            try
+            {
+                TcpClient c = (TcpClient)obj;
+                BinaryFormatter bf = new BinaryFormatter();
+                NetworkStream ns = c.GetStream();
+                while (true)
+                {
+                    object b = bf.Deserialize(ns);
+                    dc = (DrawingClient)b;
+                    if (dc.Points.Count > 0)
+                    {
+                        for (int i = 0; i < dc.Points.Count - 2; i++)
+                        {
+                            if (g != null)
+                            {
+                                g.DrawLine(p, dc.Points[i], dc.Points[i + 1]);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+
     }
 }

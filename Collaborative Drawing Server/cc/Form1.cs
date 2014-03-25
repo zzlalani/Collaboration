@@ -28,11 +28,13 @@ namespace cc
         Point ep = new Point(0, 0);
         int k = 0;
 
+        BinaryFormatter bf = new BinaryFormatter();
         
-        List<string> startpoints = new List<string>();
-        List<string> endpoints = new List<string>();
-        List<Point> myPoints = new List<Point>();
+        List<Point> myPoints;
         DrawingClient dc = new DrawingClient();
+
+
+        TcpClient client;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -53,6 +55,7 @@ namespace cc
 
         private void drawCanvas_MouseDown(object sender, MouseEventArgs e)
         {
+            myPoints = new List<Point>();
             sp = e.Location;
             if (e.Button == MouseButtons.Left)
             {
@@ -63,6 +66,13 @@ namespace cc
         private void drawCanvas_MouseUp(object sender, MouseEventArgs e)
         {
             k = 0;
+            if (client != null)
+            {
+                bf.Serialize(client.GetStream(), dc);
+
+                myPoints = null;
+            }
+            
         }
 
         private void drawCanvas_MouseMove(object sender, MouseEventArgs e)
@@ -72,8 +82,8 @@ namespace cc
                 ep = e.Location;
                 g = drawCanvas.CreateGraphics();
                 g.DrawLine(p, sp, ep);
-                startpoints.Add(sp.ToString());
-                endpoints.Add(ep.ToString());
+                myPoints.Add(sp);
+                dc.Points = myPoints;
             }
             sp = ep;
         }
@@ -81,10 +91,10 @@ namespace cc
         void AcceptConnection(IAsyncResult ar)
         {
             TcpListener listener = (TcpListener)ar.AsyncState;
-            TcpClient c = listener.EndAcceptTcpClient(ar);
+            client = listener.EndAcceptTcpClient(ar);
             
             Thread t = new Thread(new ParameterizedThreadStart(RcV));
-            t.Start(c);
+            t.Start(client);
         }
 
         void RcV(object obj)
@@ -112,6 +122,7 @@ namespace cc
             }
             catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
             }
         }
 
