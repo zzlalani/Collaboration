@@ -34,6 +34,23 @@ namespace dClient
         
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
+
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        /**/
+
+        private void drawCanvas_MouseDown(object sender, MouseEventArgs e)
+        {
             myPoints = new List<Point>();
             sp = e.Location;
             if (e.Button == MouseButtons.Left)
@@ -42,7 +59,7 @@ namespace dClient
             }
         }
 
-        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        private void drawCanvas_MouseUp(object sender, MouseEventArgs e)
         {
             k = 0;
             if (client != null)
@@ -54,16 +71,14 @@ namespace dClient
                 MessageBox.Show("Data is not being sent as you are not connected to Server");
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        private void drawCanvas_MouseMove(object sender, MouseEventArgs e)
         {
-            if (k==1)
+            if (k == 1)
             {
                 ep = e.Location;
-                g = this.CreateGraphics();
+                g = drawCanvas.CreateGraphics();
                 g.DrawLine(p, sp, ep);
 
-                label3.Text = sp.ToString();
-                label4.Text = ep.ToString();
                 myPoints.Add(sp);
                 dc.Points = myPoints;
             }
